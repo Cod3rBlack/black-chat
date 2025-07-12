@@ -1,1 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
+// src/styles.scss
+
+// Define color variables for light and dark themes
+:root {
+    // Light theme (default)
+    --primary-color: #2c3e50; // Dark blue for buttons, headers
+    --accent-color: #e91e63; // Vibrant pink for highlights
+    --background-color: #f5f5f5; // Light gray background
+    --surface-color: #ffffff; // White for cards, dialogs
+    --text-color: #212121; // Dark text
+    --secondary-text-color: #757575; // Gray for secondary text
+    --error-color: #d32f2f; // Red for errors
+    --success-color: #388e3c; // Green for success
+    --border-color: #e0e0e0; // Light gray for borders
+    --shadow-color: rgba(0, 0, 0, 0.1); // Subtle shadow
+  }
+  
+  [data-theme="dark"] {
+    // Dark theme
+    --primary-color: #3f51b5; // Indigo for buttons, headers
+    --accent-color: #ff4081; // Bright pink for highlights
+    --background-color: #121212; // Dark background
+    --surface-color: #1e1e1e; // Darker surface for cards, dialogs
+    --text-color: #ffffff; // White text
+    --secondary-text-color: #b0bec5; // Light gray for secondary text
+    --error-color: #cf6679; // Softer red for errors
+    --success-color: #00c853; // Bright green for success
+    --border-color: #424242; // Dark gray for borders
+    --shadow-color: rgba(0, 0, 0, 0.3); // Darker shadow
+  }
+  
+  // Global styles
+  html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease; // Smooth theme transition
+  }
+  
+  // Style Angular Material components
+  .mat-toolbar {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .mat-button, .mat-icon-button, .mat-raised-button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    &:hover {
+      background-color: var(--accent-color);
+    }
+  }
+  
+  .mat-dialog-container {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 8px var(--shadow-color);
+  }
+  
+  // Utility classes
+  .text-secondary {
+    color: var(--secondary-text-color);
+  }
+  .error {
+    color: var(--error-color);
+  }
+  .success {
+    color: var(--success-color);
+  }
