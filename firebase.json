@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/black-chat",
+    "public": "dist/black-chat/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
