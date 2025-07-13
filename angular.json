@@ -51,6 +51,9 @@
                   "maximumError": "4kB"
                 }
               ],
+              "outputPath": "dist/black-chat/browser",
+              "optimization": true,
+              "sourceMap": false,
               "outputHashing": "all"
             },
             "development": {
